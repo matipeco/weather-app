@@ -1,4 +1,5 @@
 import { useState, FormEvent, ChangeEvent, FunctionComponent } from "react";
+import style from './index.module.css'
 
 type Props = {
     weather: (city: string) => Promise<void>;
@@ -18,10 +19,10 @@ export const SearchBar: FunctionComponent<Props> = ({ weather }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className={style.searchBarBackground} onSubmit={handleSubmit}>
             <input type="text" value={input} onChange={handleChange} placeholder='Search city...' />
-            <button>Search</button>
-        </form>
+            <button className={style.button}></button>
+        </form >
     )
 
 }
