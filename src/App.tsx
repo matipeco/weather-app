@@ -1,7 +1,7 @@
 import { SearchBar } from './components/SearchBar';
 import axios from 'axios';
 import { useState } from "react";
-import { Card } from "./components/Card";
+import Card from "./components/Card";
 import style from './index.module.css';
 
 export type Weather = {
@@ -38,21 +38,14 @@ function App() {
       })
   }
 
-  if (!flag)
-    return (
-      <div className={style.background}>
-        < SearchBar weather={weather} />
-      </div>
-    )
-
   console.log(cityWeather)
 
   return (
-    <div>
+    <div className={style.background}>
       {/* A mi search le paso la Fn weather para que la ejecute cuando el usuario aprete el boton*/}
-      < SearchBar weather={weather} />
+      {!flag && < SearchBar weather={weather} />}
       {/*A mi Card le paso mi estado con la info cargada por props  */}
-      <Card cityWeather={cityWeather} />
+      {flag && <Card cityWeather={cityWeather} setFlag={setFlag} />}
     </div>
   )
 }

@@ -44,10 +44,10 @@ input {
 
 .button {
     margin-right: 20px;
-    width: 37px;
-    height: 58%;
+    width: 36px;
+    height: 60%;
     border-radius: 50%;
-    border: rgba(238, 238, 238, 0.6) 3px currentColor;
+    border: solid rgba(238, 238, 238, 0.6) 2px currentColor;
     background-color: none;
     background-color: rgba(45, 45, 45, 0.1);
     transition: 350ms ease-in-out;
@@ -62,7 +62,7 @@ input {
 .button:hover {
     opacity: 0.8;
     /* Cambia la opacidad del botón */
-    box-shadow: 0px 0px 5px 2px rgba(225, 225, 225, 0.9);
+    box-shadow: 0px 0px 5px 2px rgba(225, 225, 225, 0.6);
     /* Agrega una sombra suave */
     /* Agrega una transición suave */
 }
