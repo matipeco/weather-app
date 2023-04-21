@@ -45,6 +45,8 @@ function App() {
       </div>
     )
 
+  console.log(cityWeather)
+
   return (
     <div>
       {/* A mi search le paso la Fn weather para que la ejecute cuando el usuario aprete el boton*/}

@@ -1,7 +1,7 @@
 .searchBarBackground {
     background-color: rgba(45, 45, 45, 0.4);
-    width: 210px;
-    height: 45px;
+    width: 220px;
+    height: 47px;
     border-radius: 8px;
     /* box-shadow: 0px 0px 5px 2px rgba(45, 45, 45, 0.4); */
     /* Agrega una sombra suave para dar profundidad */
@@ -45,12 +45,12 @@ input {
 .button {
     margin-right: 20px;
     width: 37px;
-    height: 60%;
+    height: 58%;
     border-radius: 50%;
     border: rgba(238, 238, 238, 0.6) 3px currentColor;
     background-color: none;
     background-color: rgba(45, 45, 45, 0.1);
-    transition: 300ms ease-in-out;
+    transition: 350ms ease-in-out;
     cursor: pointer;
 }
 
