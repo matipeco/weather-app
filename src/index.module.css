@@ -5,7 +5,7 @@
   font: inherit;
 }
 
-body {
+.background {
   text-decoration: none;
   color: black;
   background-image: url("../public/background.jpg");
@@ -13,4 +13,7 @@ body {
   height: 100vh;
   background-size: cover;
   font-family: "Varela Round", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

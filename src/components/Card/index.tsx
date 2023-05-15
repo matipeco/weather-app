@@ -34,6 +34,10 @@ const Card: FunctionComponent<Props> = ({
           <span>Clima: </span>
           {city?.weather[0].description}
         </p>
+        <img
+          src={`https://openweathermap.org/img/wn/${city?.weather[0].icon}@2x.png`}
+          alt=""
+        />
         <p>
           {" "}
           <span>Humedad: </span>% {city?.main.humidity}

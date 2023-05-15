@@ -14,6 +14,7 @@ export type Weather = {
   weather: [
     {
       description: string;
+      icon: string;
     }
   ];
   sys: {
@@ -39,7 +40,7 @@ function App() {
         alert("Ciudad no encontrada!");
       });
   };
-
+  console.log(citiesWeather);
   return (
     <div className={style.background}>
       <SearchBar weather={weather} citiesWeather={citiesWeather} />
