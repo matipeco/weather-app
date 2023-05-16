@@ -7,12 +7,14 @@ export const StyledCard = styled.article`
     justify-content: center;
     align-items: center; */
   .card-container {
+    min-width: 20rem;
     padding: 2rem;
     border-radius: 5px;
     border: transparent;
     background-color: rgba(45, 45, 45, 0.4);
     position: relative;
     margin: 0 1rem;
+    color: #d6eab7;
   }
   .card-button {
     top: 10px;
