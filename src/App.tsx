@@ -17,6 +17,9 @@ export type Weather = {
       icon: string;
     }
   ];
+  wind: {
+    speed: number;
+  };
   sys: {
     country: string;
   };
@@ -25,6 +28,8 @@ export type Weather = {
 
 function App() {
   const [citiesWeather, setCitiesWeather] = useState<Weather[]>([]);
+
+  let flag;
 
   const weather = (city: string) => {
     return axios
@@ -40,6 +45,7 @@ function App() {
         alert("Ciudad no encontrada!");
       });
   };
+
   console.log(citiesWeather);
   return (
     <div className={style.background}>
