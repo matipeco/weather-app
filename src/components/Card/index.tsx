@@ -1,5 +1,5 @@
 import { Weather } from "../../App";
-import { Dispatch, FunctionComponent } from "react";
+import { Dispatch, FunctionComponent, useEffect, useState } from "react";
 import { StyledCard } from "./styles";
 
 export type Props = {
@@ -19,29 +19,34 @@ const Card: FunctionComponent<Props> = ({
 
   return (
     <StyledCard>
-      <div className="card-container">
-        <button className="card-button" onClick={() => handleDelete(city?.id)}>
+      <div className="card__container">
+        <button className="card__button" onClick={() => handleDelete(city?.id)}>
           x
         </button>
-        <h3>{city?.sys.country}</h3>
-        <h3>{city?.name}</h3>
-        <p>
-          <span>Temp.Actual: </span>
-          {city?.main.temp}
-        </p>
-        <p>
-          {" "}
-          <span>Clima: </span>
-          {city?.weather[0].description}
-        </p>
+        <h3 className="card__country">{city?.sys.country}</h3>
         <img
+          src={`https://flagcdn.com/w320/${city.sys.country!}.png`}
+          alt="flagCity"
+        />
+        <h3 className="card__city">{city?.name}</h3>
+        <p className="card__temperature">
+          <span></span>
+          {city?.main.temp} °C
+        </p>
+        <p className="card__humidity">
+          <span></span>% {city?.main.humidity}
+        </p>
+        <p>
+          <span></span> {Math.ceil(city?.wind.speed! * 1.60934 * 2 + 2)}
+          km/h
+        </p>
+        <p className="card__weather">{city?.weather[0].description}</p>
+
+        <img
+          className="card__icon"
           src={`https://openweathermap.org/img/wn/${city?.weather[0].icon}@2x.png`}
           alt=""
         />
-        <p>
-          {" "}
-          <span>Humedad: </span>% {city?.main.humidity}
-        </p>
       </div>
     </StyledCard>
   );
