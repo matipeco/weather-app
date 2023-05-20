@@ -39,6 +39,11 @@ function App() {
         }&units=metric&lang=es`
       )
       .then((res) => {
+        if (citiesWeather.length === 6) {
+          return alert(
+            "Límite de ciudad buscadas. Elimine al menos una ciudad."
+          );
+        }
         setCitiesWeather([...citiesWeather, res.data]);
       })
       .catch((error) => {
