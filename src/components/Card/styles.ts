@@ -1,16 +1,11 @@
 import styled from "styled-components";
 
 export const StyledCard = styled.article`
-  /* display: flex;
-    min-height: 100vh;
-    width: 100%;
-    justify-content: center;
-    align-items: center; */
   .card {
     &__container {
       font-size: 1.5rem;
       font-family: "Outfit", sans-serif;
-      padding: 3rem 3rem 3rem 2rem;
+      padding: 2rem;
       border-radius: 5px;
       border: transparent;
       background-color: rgba(63, 51, 47, 0.4);
@@ -20,7 +15,9 @@ export const StyledCard = styled.article`
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 30rem;
+      width: 25rem;
+      /* border: 1px solid red; */
+
       &-title {
         display: flex;
         justify-content: center;
@@ -28,19 +25,22 @@ export const StyledCard = styled.article`
       }
     }
     &__country {
-      margin: 0 1rem;
+      margin: 0 1rem 0 2rem;
+      font-size: 1.2rem;
     }
     &__city {
       border-right: 1px solid #c9d8ce;
       padding-right: 2rem;
+
       /* text-transform: uppercase; */
-      font-size: 3rem;
+      font-size: 2.5rem;
+      font-weight: 600;
       /* text-transform: uppercase; */
     }
 
     &__icon {
-      width: 7rem;
-      height: 7rem;
+      width: 6rem;
+      height: 6rem;
     }
     &__button {
       top: 10px;
@@ -64,15 +64,14 @@ export const StyledCard = styled.article`
   }
   .card__container-section {
     /* background-color: red; */
-    margin-top: 2rem;
+    margin-top: 1.2rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     /* flex-direction: column; */
-    img {
-    }
+    /* border: 1px solid red; */
     .info {
-      margin-left: 2rem;
+      margin-left: 1rem;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -82,14 +81,14 @@ export const StyledCard = styled.article`
         margin-top: 1rem;
         /* text-transform: uppercase; */
         font-weight: 600;
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-right: auto;
       }
       p:first-child {
         margin-top: 0;
       }
       span {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 400;
         margin-right: 1rem;
         /* text-decoration: underline; */

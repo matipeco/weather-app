@@ -46,7 +46,7 @@ const Card: FunctionComponent<Props> = ({
             <div className="card__container-title">
               <h3 className="card__city">{city?.name}</h3>
               <h3 className="card__country">{city?.sys.country} </h3>
-              <img src={flag} alt="flagCity" width="60" height="40" />
+              <img src={flag} alt="flagCity" width="50" height="30" />
             </div>
             <div className="card__container-section">
               <img
@@ -56,19 +56,26 @@ const Card: FunctionComponent<Props> = ({
               />
               <div className="info">
                 <p>
-                  <img
-                    src="../../assets/icons/temperatura.svg"
-                    alt=""
-                    width="30"
-                    height="30"
-                  />
+                  <img src="../../../calor.png" alt="" width="30" height="30" />
                   <span>Temperatura:</span>
                   {city?.main.temp} °C
                 </p>
                 <p>
+                  <img
+                    src="../../../humedad.png"
+                    alt=""
+                    width="20"
+                    height="20"
+                  />
                   <span>Humedad: </span> {city?.main.humidity}%
                 </p>
                 <p>
+                  <img
+                    src="../../../viento.png"
+                    alt=""
+                    width="30"
+                    height="30"
+                  />
                   <span>Viento: </span>{" "}
                   {Math.ceil(city?.wind.speed! * 1.60934 * 2 + 2)}
                   km/h
