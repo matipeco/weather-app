@@ -1,11 +1,12 @@
 .searchBarBackground {
   background-color: rgba(45, 45, 45, 0.4);
-  padding: 10px 5px;
-  width: 220px;
+  padding: 1rem;
+  width: 25rem;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   transition: 350ms ease-in-out;
+  margin: 3rem 0 2rem;
 }
 
 .searchBarBackground:hover {
