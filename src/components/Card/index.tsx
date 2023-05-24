@@ -58,7 +58,7 @@ const Card: FunctionComponent<Props> = ({
                 <p>
                   <img src="../../../calor.png" alt="" width="30" height="30" />
                   <span>Temperatura:</span>
-                  {city?.main.temp} °C
+                  {Math.ceil(city?.main.temp!)} °C
                 </p>
                 <p>
                   <img

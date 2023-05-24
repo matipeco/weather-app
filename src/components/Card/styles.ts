@@ -33,7 +33,7 @@ export const StyledCard = styled.article`
       padding-right: 2rem;
 
       /* text-transform: uppercase; */
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 600;
       /* text-transform: uppercase; */
     }
@@ -75,6 +75,7 @@ export const StyledCard = styled.article`
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      /* align-items: center; */
       p {
         /* display: flex; */
         /* display: inline; */
@@ -93,6 +94,10 @@ export const StyledCard = styled.article`
         margin-right: 1rem;
         /* text-decoration: underline; */
         text-transform: uppercase;
+      }
+      img {
+        color: white;
+        margin-right: 1rem;
       }
     }
   }
