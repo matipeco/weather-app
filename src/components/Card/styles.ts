@@ -14,24 +14,23 @@ export const StyledCard = styled.article`
       color: #e3fdff;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      width: 25rem;
+      /* align-items: center; */
+      width: 28rem;
       /* border: 1px solid red; */
 
       &-title {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         /* align-items: center; */
       }
     }
     &__country {
-      margin: 0 1rem 0 2rem;
+      margin: 0 0 1rem;
       font-size: 1.2rem;
     }
     &__city {
       border-right: 1px solid #c9d8ce;
       padding-right: 2rem;
-
       /* text-transform: uppercase; */
       font-size: 2rem;
       font-weight: 600;
