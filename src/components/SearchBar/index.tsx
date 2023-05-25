@@ -14,6 +14,11 @@ export const SearchBar: FunctionComponent<Props> = ({
   const [input, setInput] = useState("");
 
   const handleSubmit = (ev: FormEvent<HTMLFormElement>) => {
+    if (input === "") {
+      alert("Ingrese el nombre de una ciudad");
+      ev.preventDefault();
+      return;
+    }
     const cityFound = citiesWeather.find(
       (c) => c.name.toLowerCase() === input.toLowerCase()
     );
@@ -35,6 +40,16 @@ export const SearchBar: FunctionComponent<Props> = ({
 
   return (
     <form className={style.searchBarBackground} onSubmit={handleSubmit}>
+      <button className={style.button}>
+        <img
+          className={style.search}
+          src="../../../search.svg"
+          alt=""
+          width="25"
+          height="25"
+        />
+      </button>
+
       <input
         type="text"
         value={input}
