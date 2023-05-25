@@ -38,49 +38,57 @@ const Card: FunctionComponent<Props> = ({
         <StyledCard>
           <div className="card__container">
             <button
+              type="button"
               className="card__button"
-              onClick={() => handleDelete(city?.id)}
+              onClick={(e) => {
+                e.preventDefault();
+                handleDelete(city?.id);
+              }}
             >
               x
             </button>
             <div className="card__container-title">
-              <h3 className="card__city">{city?.name}</h3>
-              <h3 className="card__country">{city?.sys.country} </h3>
-              <img src={flag} alt="flagCity" width="50" height="30" />
+              <a
+                className="ubicacion"
+                href={`https://www.google.com/maps/search/?api=1&query=${city?.name},${city?.sys.country}`}
+                target="_blank"
+              >
+                <h3 className="card__city">{city?.name}</h3>
+              </a>
+
+              <div className="card__container-flag">
+                <h3 className="card__country">{city?.sys.country} </h3>
+                <img src={flag} alt="flagCity" width="50" height="30" />
+              </div>
             </div>
             <div className="card__container-section">
-              <img
-                className="card__icon"
-                src={`https://openweathermap.org/img/wn/${city?.weather[0].icon}@2x.png`}
-                alt={city?.weather[0].description}
-              />
               <div className="info">
                 <p>
-                  <img src="../../../calor.png" alt="" width="30" height="30" />
+                  <img src="../../../temp.svg" alt="" width="24" height="24" />
                   <span>Temperatura:</span>
                   {Math.ceil(city?.main.temp!)} °C
                 </p>
                 <p>
                   <img
-                    src="../../../humedad.png"
+                    src="../../../humedat.svg"
                     alt=""
-                    width="20"
-                    height="20"
+                    width="22"
+                    height="22"
                   />
                   <span>Humedad: </span> {city?.main.humidity}%
                 </p>
                 <p>
-                  <img
-                    src="../../../viento.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                  />
+                  <img src="../../../wind.svg" alt="" width="22" height="22" />
                   <span>Viento: </span>{" "}
                   {Math.ceil(city?.wind.speed! * 1.60934 * 2 + 2)}
                   km/h
                 </p>
               </div>
+              <img
+                className="card__icon"
+                src={`https://openweathermap.org/img/wn/${city?.weather[0].icon}@2x.png`}
+                alt={city?.weather[0].description}
+              />
             </div>
           </div>
         </StyledCard>
