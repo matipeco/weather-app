@@ -54,6 +54,12 @@ function App() {
   console.log(citiesWeather);
   return (
     <div className={style.background}>
+      {citiesWeather.length === 0 && (
+        <div className={style.text}>
+          <h1>Welcome to Weather Finder!</h1>
+          <p>Discover the weather anywhere in the world.</p>
+        </div>
+      )}
       <SearchBar weather={weather} citiesWeather={citiesWeather} />
       {citiesWeather.length > 0 && (
         <Cards

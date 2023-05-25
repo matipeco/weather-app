@@ -4,6 +4,30 @@
   box-sizing: border-box;
   font: inherit;
 }
+.text {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  width: 28rem;
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 0;
+  transform: translateY(9rem);
+}
+.text h1 {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 600;
+  font-size: 3.2rem;
+  color: rgba(227, 253, 255, 0.8);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.text p {
+  color: rgb(227, 253, 255);
+  margin: 0.5rem 0 0 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
 .background {
   text-decoration: none;
@@ -17,4 +41,5 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
