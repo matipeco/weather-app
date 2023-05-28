@@ -28,8 +28,7 @@ export type Weather = {
 
 function App() {
   const [citiesWeather, setCitiesWeather] = useState<Weather[]>([]);
-
-  let flag;
+  const [showLoading, setShowLoading] = useState(false);
 
   const weather = (city: string) => {
     return axios
@@ -39,12 +38,8 @@ function App() {
         }&units=metric&lang=es`
       )
       .then((res) => {
-        if (citiesWeather.length === 6) {
-          return alert(
-            "Límite de ciudad buscadas. Elimine al menos una ciudad."
-          );
-        }
         setCitiesWeather([...citiesWeather, res.data]);
+        setShowLoading(false);
       })
       .catch((error) => {
         alert("Ciudad no encontrada!");
@@ -60,7 +55,13 @@ function App() {
           <p>Discover the weather anywhere in the world.</p>
         </div>
       )}
-      <SearchBar weather={weather} citiesWeather={citiesWeather} />
+      <SearchBar
+        weather={weather}
+        citiesWeather={citiesWeather}
+        showLoading={showLoading}
+        setShowLoading={setShowLoading}
+      />
+
       {citiesWeather.length > 0 && (
         <Cards
           citiesWeather={citiesWeather}

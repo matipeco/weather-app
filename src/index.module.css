@@ -34,7 +34,7 @@
   color: black;
   background-image: url("../public/background.jpg");
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   font-family: "Varela Round", sans-serif;
   display: flex;
