@@ -24,6 +24,7 @@ const Card: FunctionComponent<Props> = ({
       const response = await axios.get(
         `https://restcountries.com/v3.1/alpha/${city?.sys.country}`
       );
+      console.log(response.data[0]);
       setFlag(response.data[0].flags.png);
     } catch (error) {}
   };
