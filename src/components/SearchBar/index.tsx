@@ -1,15 +1,25 @@
-import { useState, FormEvent, ChangeEvent, FunctionComponent } from "react";
+import {
+  useState,
+  FormEvent,
+  ChangeEvent,
+  FunctionComponent,
+  Dispatch,
+} from "react";
 import { Weather } from "../../App";
 import style from "./index.module.css";
 
 type Props = {
   weather: (city: string) => Promise<void>;
   citiesWeather: Weather[];
+  showLoading: boolean;
+  setShowLoading: Dispatch<React.SetStateAction<boolean>>;
 };
 
 export const SearchBar: FunctionComponent<Props> = ({
   weather,
   citiesWeather,
+  showLoading,
+  setShowLoading,
 }) => {
   const [input, setInput] = useState("");
 
@@ -19,6 +29,9 @@ export const SearchBar: FunctionComponent<Props> = ({
       ev.preventDefault();
       return;
     }
+
+    setShowLoading(true);
+
     const cityFound = citiesWeather.find(
       (c) => c.name.toLowerCase() === input.toLowerCase()
     );
@@ -39,24 +52,36 @@ export const SearchBar: FunctionComponent<Props> = ({
   };
 
   return (
-    <form className={style.searchBarBackground} onSubmit={handleSubmit}>
-      <button className={style.button}>
-        <img
-          className={style.search}
-          src="../../../search.svg"
-          alt=""
-          width="25"
-          height="25"
-        />
-      </button>
+    <>
+      <form className={style.searchBarBackground} onSubmit={handleSubmit}>
+        <button className={style.button}>
+          {!showLoading && (
+            <img
+              className={style.search}
+              src="../../../search.svg"
+              alt=""
+              width="25"
+              height="25"
+            />
+          )}
+          {showLoading && (
+            <img
+              className={style.loading}
+              src="../../../load.svg"
+              alt=""
+              width="25"
+              height="25"
+            />
+          )}
+        </button>
 
-      <input
-        type="text"
-        value={input}
-        onChange={handleChange}
-        placeholder="Search city..."
-      />
-      {/* <button className={style.button}></button> */}
-    </form>
+        <input
+          type="text"
+          value={input}
+          onChange={handleChange}
+          placeholder="Search city..."
+        />
+      </form>
+    </>
   );
 };
