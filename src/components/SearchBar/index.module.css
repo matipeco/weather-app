@@ -1,7 +1,7 @@
 .searchBarBackground {
   background-color: rgba(63, 51, 47, 0.3);
   padding: 1rem;
-  width: 28rem;
+  max-width: 28rem;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -51,4 +51,11 @@ input {
 }
 .loading {
   animation: rotate 3s linear infinite;
+}
+
+@media (max-width: 700px) {
+  .searchBarBackground {
+    width: 28rem;
+    padding: 0.7rem;
+  }
 }

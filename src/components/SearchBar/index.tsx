@@ -38,6 +38,7 @@ export const SearchBar: FunctionComponent<Props> = ({
 
     if (cityFound) {
       alert("La ciudad ya ha sido buscada!");
+      setShowLoading(false);
       ev.preventDefault();
       setInput("");
     } else {
