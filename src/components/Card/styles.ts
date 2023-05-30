@@ -28,7 +28,12 @@ export const StyledCard = styled.article`
       width: 28rem;
       /* border: 1px solid red; */
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
-      transition: 300ms ease-out;
+      opacity: 0;
+      transition: opacity 1s ease-in, background-color 300ms ease-out;
+
+      &.visible {
+        opacity: 1;
+      }
 
       &-title {
         display: flex;

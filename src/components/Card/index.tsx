@@ -14,6 +14,8 @@ const Card: FunctionComponent<Props> = ({
   citiesWeather,
   setCitiesWeather,
 }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
   const handleDelete = (id: number | undefined) => {
     setCitiesWeather(citiesWeather.filter((city) => city.id !== id));
   };
@@ -33,11 +35,16 @@ const Card: FunctionComponent<Props> = ({
     getFlag(city);
   }, [city]);
 
+  useEffect(() => {
+    if (flag !== "") {
+      setIsVisible(true);
+    }
+  }, [flag]);
   return (
     <>
       {flag !== "" && (
         <StyledCard>
-          <div className="card__container">
+          <div className={`card__container ${isVisible ? "visible" : ""}`}>
             <button
               type="button"
               className="card__button"
