@@ -43,3 +43,17 @@
   flex-direction: column;
   position: relative;
 }
+
+@media (max-width: 700px) {
+  .text {
+    position: absolute;
+    transform: translateY(11rem);
+  }
+  .text h1 {
+    width: 26rem;
+    font-size: 2.6rem;
+  }
+  .text p {
+    width: 20rem;
+  }
+}

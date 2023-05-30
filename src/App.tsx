@@ -42,11 +42,12 @@ function App() {
         setShowLoading(false);
       })
       .catch((error) => {
+        setShowLoading(false);
         alert("Ciudad no encontrada!");
       });
   };
 
-  console.log(citiesWeather);
+  // console.log(citiesWeather);
   return (
     <div className={style.background}>
       {citiesWeather.length === 0 && (
