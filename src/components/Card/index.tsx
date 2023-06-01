@@ -78,7 +78,7 @@ const Card: FunctionComponent<Props> = ({
                 </p>
                 <p>
                   <img
-                    src="../../../humedat.svg"
+                    src="../../../humedad.svg"
                     alt=""
                     width="22"
                     height="22"

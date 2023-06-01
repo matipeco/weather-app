@@ -52,10 +52,10 @@ function App() {
     <div className={style.background}>
       <div className={style.container__svg}>
         <a href="https://github.com/matipeco/weather-app">
-        <img src="../public/git.jpg" alt="repositorio github" width="54" height="54"/>
+        <img src="git.jpg" alt="repositorio github" width="54" height="54"/>
         </a>
         <a href="https://www.linkedin.com/in/matiaspecorale/">
-        <img src="../public/lk.jpg" alt="perfil de linkedin" width="50" height="50"/>
+        <img src="lk.jpg" alt="perfil de linkedin" width="50" height="50"/>
 
         </a>
       </div>
