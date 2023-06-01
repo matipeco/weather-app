@@ -47,13 +47,19 @@
 @media (max-width: 700px) {
   .text {
     position: absolute;
-    transform: translateY(11rem);
+    transform: translateY(13rem);
+   
   }
   .text h1 {
-    width: 26rem;
-    font-size: 2.6rem;
+    display: inline;
+    width: 20rem;
+    font-size: 2rem;
+    margin:0 auto;
   }
   .text p {
+    margin:0 auto;
     width: 20rem;
   }
 }
+
+

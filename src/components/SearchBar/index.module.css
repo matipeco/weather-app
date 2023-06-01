@@ -56,5 +56,6 @@ input {
 @media (max-width: 700px) {
   .searchBarBackground {
     padding: 0.7rem;
+    width: 20rem;
   }
 }
