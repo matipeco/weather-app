@@ -50,6 +50,15 @@ function App() {
   // console.log(citiesWeather);
   return (
     <div className={style.background}>
+      <div className={style.container__svg}>
+        <a href="https://github.com/matipeco/weather-app">
+        <img src="../public/git.png" alt="repositorio github" width="54" height="54"/>
+        </a>
+        <a href="https://www.linkedin.com/in/matiaspecorale/">
+        <img src="../public/lk.png" alt="perfil de linkedin" width="50" height="50"/>
+
+        </a>
+      </div>
       {citiesWeather.length === 0 && (
         <div className={style.text}>
           <h1>Welcome to Weather Finder!</h1>
