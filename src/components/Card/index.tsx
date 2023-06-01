@@ -72,7 +72,7 @@ const Card: FunctionComponent<Props> = ({
             <div className="card__container-section">
               <div className="info">
                 <p>
-                  <img src="../../../temp.svg" alt="" width="24" height="24" />
+                  <img src="../../../temp.svg" alt="" width="25" height="25" />
                   <span>Temperatura:</span>
                   {Math.ceil(city?.main.temp!)} °C
                 </p>

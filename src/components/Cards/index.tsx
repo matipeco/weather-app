@@ -13,7 +13,7 @@ export const Cards: FunctionComponent<Props> = ({
   setCitiesWeather,
 }) => {
   return (
-    <StyledCards>
+    <StyledCards >
       {citiesWeather?.map((city) => (
         <Card
           key={city.id}
