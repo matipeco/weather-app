@@ -80,7 +80,7 @@ export const SearchBar: FunctionComponent<Props> = ({
           type="text"
           value={input}
           onChange={handleChange}
-          placeholder="Search city...."
+          placeholder="Search city..."
         />
       </form>
     </>

@@ -1,14 +1,15 @@
 .searchBarBackground {
   background-color: rgba(63, 51, 47, 0.3);
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 28rem;
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  transition: 350ms ease-in-out;
-  margin: 3rem 0 1rem;
-  display: flex;
+  transition: 350ms ease-in;
+  margin: 1.5rem 0 ;
+  display:flex;
   align-items: center;
+  justify-content: center;
 }
 
 .search {
@@ -17,8 +18,9 @@
 }
 
 .searchBarBackground:hover {
-  box-shadow: 0px 0px 12px 9px rgba(45, 45, 45, 0.1);
-  background-color: rgba(63, 51, 47, 0.6);
+  box-shadow: 0px 0px 12px 4px rgba(45, 45, 45, 0.1);
+
+  background-color: rgba(63, 51, 47, 0.4);
 }
 
 input {
@@ -28,11 +30,11 @@ input {
   color: #eeeeee;
   border: none;
   cursor: text;
-  margin-left: 1rem;
   outline: none;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  /* text-align: center; */
+  padding: 1rem;
+  padding-left: 0;
 }
 
 .button {
@@ -51,11 +53,16 @@ input {
 }
 .loading {
   animation: rotate 3s linear infinite;
+  margin: 0 1rem;
 }
 
 @media (max-width: 700px) {
   .searchBarBackground {
-    padding: 0.7rem;
-    width: 20rem;
+    padding: 0;
+    width: 18rem;
+  }
+  input{
+  font-size: 1rem;
+
   }
 }
