@@ -9,7 +9,7 @@
 <li>Buscar el clima de una o muchas ciudades de cualquier parte del mundo. </li>
 <li>Eliminar una card de una ciudad en particular.</li>
 <li>Acceder a la ubicación de una ciudad, a través de un click sobre el nombre de la ciudad.</li>
-<li>Acceder al repositorio del proyecto y al perfil de LinkedIn</li>
+<li>Acceder al repositorio del proyecto y al perfil de LinkedIn.</li>
 
 </ul>
 
