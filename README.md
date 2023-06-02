@@ -3,7 +3,6 @@
 
 <h4>Es una SPA desarrollada con Vite.js, React, Typescript, Styled-components. Diseñada para versiones Desktop y Mobile, full responsive.</h4>
 
-<br />
 <ul>
   <h3>El usuario podrá: </h3>
 
