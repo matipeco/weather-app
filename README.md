@@ -1,13 +1,11 @@
 &nbsp;
 <h2 align="center">Weather Finder</h2>
 
-<h4>Es una SPA desarrollada con Vite.js, React, Typescript, Styled-components.
-<br />
+<h4>Es una SPA desarrollada con Vite.js, React, Typescript, Styled-components. Diseñada para versiones Desktop y Mobile, full responsive.</h4>
 
 <br />
 <ul>
   <h3>El usuario podrá: </h3>
-
 
 <li>Buscar el clima de una o muchas ciudades de cualquier parte del mundo. </li>
 <li>Eliminar una card de una ciudad en particular.</li>
