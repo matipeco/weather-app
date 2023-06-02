@@ -9,7 +9,7 @@
   <h3>El usuario podrá: </h3>
 
 
-<li>Buscar el clima de una o muchas ciudades de cualquier parte del mundo./li>
+<li>Buscar el clima de una o muchas ciudades de cualquier parte del mundo. </li>
 <li>Eliminar una card de una ciudad en particular.</li>
 <li>Acceder a la ubicación de una ciudad, a través de un click sobre el nombre de la ciudad.</li>
 
@@ -20,7 +20,7 @@
 <br />
 
 <br />
-<p align="center">
+<p align="start">
   <a><img width="250px" src="https://i.imgur.com/NW97Fip.png"></a>
   <a><img width="250px" src="https://i.imgur.com/rZw9lZc.png"/></a>
 
